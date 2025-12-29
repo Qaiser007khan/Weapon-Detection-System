@@ -1,0 +1,347 @@
+# Complete YOLO Commands Guide
+
+## YOLOv8 Commands
+
+### Training
+```bash
+# YOLOv8 Medium (m)
+yolo train data=dataset.yaml model=yolov8m.pt epochs=100 imgsz=640 batch=16 device=0
+
+# YOLOv8 Large (l)  
+yolo train data=dataset.yaml model=yolov8l.pt epochs=100 imgsz=640 batch=8 device=0
+
+# YOLOv8 Extra Large (x)
+yolo train data=dataset.yaml model=yolov8x.pt epochs=100 imgsz=640 batch=4 device=0
+
+# Custom training parameters
+yolo train data=dataset.yaml model=yolov8m.pt epochs=300 imgsz=640 batch=16 lr0=0.01 lrf=0.01 momentum=0.937 weight_decay=0.0005 warmup_epochs=3 warmup_momentum=0.8 warmup_bias_lr=0.1 box=7.5 cls=0.5 dfl=1.5 pose=12.0 kobj=1.0 label_smoothing=0.0 nbs=64 hsv_h=0.015 hsv_s=0.7 hsv_v=0.4 degrees=0.0 translate=0.1 scale=0.5 shear=0.0 perspective=0.0 flipud=0.0 fliplr=0.5 mosaic=1.0 mixup=0.0 copy_paste=0.0 device=0
+```
+
+### Validation
+```bash
+# YOLOv8 Medium
+yolo val model=yolov8m.pt data=dataset.yaml imgsz=640 batch=32 device=0
+
+# YOLOv8 Large
+yolo val model=yolov8l.pt data=dataset.yaml imgsz=640 batch=16 device=0
+
+# YOLOv8 Extra Large
+yolo val model=yolov8x.pt data=dataset.yaml imgsz=640 batch=8 device=0
+```
+
+### Inference/Prediction
+```bash
+# YOLOv8 Medium
+yolo predict model=yolov8m.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+yolo predict model=yolov8m.pt source=video.mp4 imgsz=640 conf=0.25 iou=0.45 device=0
+yolo predict model=yolov8m.pt source=0 imgsz=640 conf=0.25 iou=0.45 device=0  # webcam
+
+# YOLOv8 Large
+yolo predict model=yolov8l.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+
+# YOLOv8 Extra Large
+yolo predict model=yolov8x.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+```
+
+## YOLOv9 Commands
+
+### Training
+```bash
+# YOLOv9 Medium (m)
+yolo train data=dataset.yaml model=yolov9m.pt epochs=100 imgsz=640 batch=16 device=0
+
+# YOLOv9 Large (l)
+yolo train data=dataset.yaml model=yolov9l.pt epochs=100 imgsz=640 batch=8 device=0
+
+# YOLOv9 Extra Large (x)
+yolo train data=dataset.yaml model=yolov9x.pt epochs=100 imgsz=640 batch=4 device=0
+
+# YOLOv9c (Compact)
+yolo train data=dataset.yaml model=yolov9c.pt epochs=100 imgsz=640 batch=16 device=0
+
+# YOLOv9e (Efficient)
+yolo train data=dataset.yaml model=yolov9e.pt epochs=100 imgsz=640 batch=8 device=0
+```
+
+### Validation
+```bash
+# YOLOv9 Medium
+yolo val model=yolov9m.pt data=dataset.yaml imgsz=640 batch=32 device=0
+
+# YOLOv9 Large
+yolo val model=yolov9l.pt data=dataset.yaml imgsz=640 batch=16 device=0
+
+# YOLOv9 Extra Large
+yolo val model=yolov9x.pt data=dataset.yaml imgsz=640 batch=8 device=0
+```
+
+### Inference/Prediction
+```bash
+# YOLOv9 Medium
+yolo predict model=yolov9m.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+
+# YOLOv9 Large
+yolo predict model=yolov9l.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+
+# YOLOv9 Extra Large
+yolo predict model=yolov9x.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+```
+
+## YOLOv10 Commands
+
+### Training
+```bash
+# YOLOv10 Medium (m)
+yolo train data=dataset.yaml model=yolov10m.pt epochs=100 imgsz=640 batch=16 device=0
+
+# YOLOv10 Large (l)
+yolo train data=dataset.yaml model=yolov10l.pt epochs=100 imgsz=640 batch=8 device=0
+
+# YOLOv10 Extra Large (x)
+yolo train data=dataset.yaml model=yolov10x.pt epochs=100 imgsz=640 batch=4 device=0
+```
+
+### Validation
+```bash
+# YOLOv10 Medium
+yolo val model=yolov10m.pt data=dataset.yaml imgsz=640 batch=32 device=0
+
+# YOLOv10 Large
+yolo val model=yolov10l.pt data=dataset.yaml imgsz=640 batch=16 device=0
+
+# YOLOv10 Extra Large
+yolo val model=yolov10x.pt data=dataset.yaml imgsz=640 batch=8 device=0
+```
+
+### Inference/Prediction
+```bash
+# YOLOv10 Medium
+yolo predict model=yolov10m.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+
+# YOLOv10 Large
+yolo predict model=yolov10l.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+
+# YOLOv10 Extra Large
+yolo predict model=yolov10x.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+```
+
+## YOLOv11 Commands
+
+### Training
+```bash
+# YOLOv11 Medium (m)
+yolo train data=dataset.yaml model=yolo11m.pt epochs=100 imgsz=640 batch=16 device=0
+
+# YOLOv11 Large (l)
+yolo train data=dataset.yaml model=yolo11l.pt epochs=100 imgsz=640 batch=8 device=0
+
+# YOLOv11 Extra Large (x)
+yolo train data=dataset.yaml model=yolo11x.pt epochs=100 imgsz=640 batch=4 device=0
+```
+
+### Validation
+```bash
+# YOLOv11 Medium
+yolo val model=yolo11m.pt data=dataset.yaml imgsz=640 batch=32 device=0
+
+# YOLOv11 Large
+yolo val model=yolo11l.pt data=dataset.yaml imgsz=640 batch=16 device=0
+
+# YOLOv11 Extra Large
+yolo val model=yolo11x.pt data=dataset.yaml imgsz=640 batch=8 device=0
+```
+
+### Inference/Prediction
+```bash
+# YOLOv11 Medium
+yolo predict model=yolo11m.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+
+# YOLOv11 Large
+yolo predict model=yolo11l.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+
+# YOLOv11 Extra Large
+yolo predict model=yolo11x.pt source=image.jpg imgsz=640 conf=0.25 iou=0.45 device=0
+```
+
+## RT-DETR Commands
+
+### Training
+```bash
+# RT-DETR Large (l)
+yolo train data=dataset.yaml model=rtdetr-l.pt epochs=100 imgsz=640 batch=8 device=0
+
+# RT-DETR Extra Large (x)
+yolo train data=dataset.yaml model=rtdetr-x.pt epochs=100 imgsz=640 batch=4 device=0
+
+# RT-DETR ResNet50
+yolo train data=dataset.yaml model=rtdetr-resnet50.pt epochs=100 imgsz=640 batch=16 device=0
+
+# RT-DETR ResNet101
+yolo train data=dataset.yaml model=rtdetr-resnet101.pt epochs=100 imgsz=640 batch=8 device=0
+```
+
+### Validation
+```bash
+# RT-DETR Large
+yolo val model=rtdetr-l.pt data=dataset.yaml imgsz=640 batch=16 device=0
+
+# RT-DETR Extra Large
+yolo val model=rtdetr-x.pt data=dataset.yaml imgsz=640 batch=8 device=0
+
+# RT-DETR ResNet50
+yolo val model=rtdetr-resnet50.pt data=dataset.yaml imgsz=640 batch=32 device=0
+
+# RT-DETR ResNet101
+yolo val model=rtdetr-resnet101.pt data=dataset.yaml imgsz=640 batch=16 device=0
+```
+
+### Inference/Prediction
+```bash
+# RT-DETR Large
+yolo predict model=rtdetr-l.pt source=image.jpg imgsz=640 conf=0.25 device=0
+
+# RT-DETR Extra Large
+yolo predict model=rtdetr-x.pt source=image.jpg imgsz=640 conf=0.25 device=0
+
+# RT-DETR ResNet50
+yolo predict model=rtdetr-resnet50.pt source=image.jpg imgsz=640 conf=0.25 device=0
+
+# RT-DETR ResNet101
+yolo predict model=rtdetr-resnet101.pt source=image.jpg imgsz=640 conf=0.25 device=0
+```
+
+## Advanced Training Parameters
+
+### Common Advanced Parameters
+```bash
+# Extended training with advanced parameters
+yolo train \
+    data=dataset.yaml \
+    model=yolov8m.pt \
+    epochs=300 \
+    imgsz=640 \
+    batch=16 \
+    lr0=0.01 \
+    lrf=0.01 \
+    momentum=0.937 \
+    weight_decay=0.0005 \
+    warmup_epochs=3 \
+    warmup_momentum=0.8 \
+    warmup_bias_lr=0.1 \
+    box=7.5 \
+    cls=0.5 \
+    dfl=1.5 \
+    hsv_h=0.015 \
+    hsv_s=0.7 \
+    hsv_v=0.4 \
+    degrees=0.0 \
+    translate=0.1 \
+    scale=0.5 \
+    shear=0.0 \
+    perspective=0.0 \
+    flipud=0.0 \
+    fliplr=0.5 \
+    mosaic=1.0 \
+    mixup=0.0 \
+    copy_paste=0.0 \
+    patience=100 \
+    save_period=10 \
+    workers=8 \
+    project=runs/detect \
+    name=exp \
+    exist_ok=False \
+    pretrained=True \
+    optimizer=auto \
+    verbose=True \
+    seed=0 \
+    deterministic=True \
+    single_cls=False \
+    rect=False \
+    cos_lr=False \
+    close_mosaic=10 \
+    resume=False \
+    amp=True \
+    fraction=1.0 \
+    profile=False \
+    freeze=None \
+    multi_scale=False \
+    overlap_mask=True \
+    mask_ratio=4 \
+    dropout=0.0 \
+    val=True \
+    plots=True \
+    device=0
+```
+
+### Multi-GPU Training
+```bash
+# Multi-GPU training (4 GPUs)
+yolo train data=dataset.yaml model=yolov8m.pt epochs=100 imgsz=640 batch=64 device=0,1,2,3
+
+# DDP (Distributed Data Parallel) training
+python -m torch.distributed.run --nproc_per_node=4 yolo train data=dataset.yaml model=yolov8m.pt epochs=100 imgsz=640 batch=16 device=0,1,2,3
+```
+
+### Export Commands
+```bash
+# Export to different formats
+yolo export model=yolov8m.pt format=onnx imgsz=640 device=0
+yolo export model=yolov8m.pt format=torchscript imgsz=640 device=0
+yolo export model=yolov8m.pt format=tensorrt imgsz=640 device=0
+yolo export model=yolov8m.pt format=coreml imgsz=640 device=0
+yolo export model=yolov8m.pt format=openvino imgsz=640 device=0
+```
+
+## Parameter Explanations
+
+### Key Parameters:
+- `data`: Path to dataset YAML file
+- `model`: Model architecture (n/s/m/l/x for nano/small/medium/large/extra-large)
+- `epochs`: Number of training epochs
+- `imgsz`: Input image size
+- `batch`: Batch size (adjust based on GPU memory)
+- `device`: GPU device ID (0, 1, 2, etc. or cpu)
+- `lr0`: Initial learning rate
+- `patience`: Early stopping patience
+- `conf`: Confidence threshold for inference
+- `iou`: IoU threshold for NMS
+
+### Batch Size Guidelines:
+- **Medium models**: 16-32 (depending on GPU memory)
+- **Large models**: 8-16 (depending on GPU memory)
+- **Extra Large models**: 4-8 (depending on GPU memory)
+- **RT-DETR**: Generally requires smaller batch sizes due to transformer architecture
+
+### GPU Memory Requirements:
+- **YOLOv8/9/10/11 Medium**: ~6-8GB VRAM
+- **YOLOv8/9/10/11 Large**: ~8-12GB VRAM
+- **YOLOv8/9/10/11 Extra Large**: ~12-16GB VRAM
+- **RT-DETR Large**: ~10-14GB VRAM
+- **RT-DETR Extra Large**: ~14-18GB VRAM
+
+## Installation Requirements
+
+```bash
+# Install Ultralytics
+pip install ultralytics
+
+# For YOLOv9 (if separate installation needed)
+pip install yolov9
+
+# For RT-DETR
+pip install ultralytics[extra]
+
+# Additional dependencies
+pip install torch torchvision torchaudio
+pip install opencv-python
+pip install pillow
+pip install matplotlib
+pip install tensorboard
+```
+
+## Notes:
+- **YOLOv12**: Not officially released as of current date
+- Adjust batch sizes based on your GPU memory
+- Use `device=cpu` for CPU-only training/inference
+- For multiple GPUs, use `device=0,1,2,3` format
+- RT-DETR models don't use IoU parameter during inference (end-to-end detection)
