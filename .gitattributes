@@ -1,3 +1,6 @@
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.engine filter=lfs diff=lfs merge=lfs -text
 weapon_weights/*.onnx filter=lfs diff=lfs merge=lfs -text
 weapon_weights/*.engine filter=lfs diff=lfs merge=lfs -text
 weapon_weights/*.pt filter=lfs diff=lfs merge=lfs -text
